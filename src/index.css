@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    background-image:url('https://img.freepik.com/free-vector/premium-dark-black-business-wallpaper-with-stripe-lines-design_1017-55827.jpg?semt=ais_hybrid');
+    /* background-color: rgb(32, 32, 32); */
+    background-size: cover; 
+    /* background-position: center;  */
+    background-repeat: no-repeat; 
+}

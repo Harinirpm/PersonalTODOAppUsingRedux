@@ -12,13 +12,13 @@ const FilterButtons = () => {
   return (
     <div className="flex space-x-4 items-center">
       <select
-        className="text-sm px-2 py-1 rounded border border-gray-300 focus:outline-none"
+        className="text-sm px-2 py-1 rounded border border-gray-300 focus:outline-none text-gray-950"
         value={currentFilter}
         onChange={(e) => handleFilter(e.target.value)}
       >
-        <option value="ALL">Default</option>
-        <option value="COMPLETED">Completed</option>
-        <option value="INCOMPLETE">Incomplete</option>
+        <option value="ALL" style={{ color: 'black' }}>Default</option>
+        <option value="COMPLETED" style={{ color: 'black' }}>Completed</option>
+        <option value="INCOMPLETE" style={{ color: 'black' }}>Incomplete</option>
       </select>
 
       <button

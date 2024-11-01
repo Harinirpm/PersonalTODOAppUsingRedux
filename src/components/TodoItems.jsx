@@ -30,31 +30,31 @@ const TodoItem = ({ todo, index }) => {
       </div>
       <div className="space-x-3 ml-8">
         <button
-          className="mr-2 text-sm bg-blue-500 text-white sm:px-2 px-1 py-1 rounded"
+          className="mr-1 text-md bg-blue-10 text-white sm:px-2 px-1 py-1 rounded"
           onClick={() => dispatch(toggleTodo(index))}
         >
-          {todo.completed ? <FaToggleOff /> : <FaToggleOn />}
+          {todo.completed ? <FaToggleOff style={{fontSize:"20px"}}/> : <FaToggleOn style={{fontSize:"20px"}}/>}
         </button>
         <button
-          className="mr-2 text-sm bg-red-500 text-white sm:px-2 px-1 py-1 rounded"
+          className="mr-2 text-sm bg-red-10 text-white sm:px-2 px-1 py-1 rounded-[5px]"
           onClick={() => dispatch(removeTodo(index))}
         >
-          <FaTrash />
+          <FaTrash style={{color:"#f51c00",fontSize:"15px"}}/>
         </button>
         {!todo.completed && (
           <button
-            className="text-sm bg-green-500 text-white sm:px-2 px-1 py-1 rounded"
+            className="text-sm bg-green-10 text-green-500 sm:px-2 px-1 py-1 rounded-[5px]"
             onClick={() => dispatch(markCompleted(index))}
           >
-            <FaCheck />
+            <FaCheck style={{fontSize:"20px"}}/>
           </button>
         )}
         {todo.completed && (
           <button
-            className="text-sm bg-yellow-500 text-white sm:px-2 px-1 py-1 rounded"
+            className="text-sm bg-yellow-500 text-white sm:px-2 px-1 py-1 rounded-[5px]"
             onClick={() => dispatch(markInComplete(index))}
           >
-            <FaTimes />
+            <FaTimes style={{fontSize:"15px"}}/>
           </button>
         )}
       </div>

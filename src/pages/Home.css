@@ -1,0 +1,24 @@
+@keyframes borderAnimation {
+    0% {
+      border-color: rgb(226, 75, 75);
+    }
+    25% {
+      border-color: rgb(102, 102, 224);
+    }
+    50% {
+      border-color: rgb(31, 216, 31);
+    }
+    75% {
+      border-color: rgb(228, 228, 102);
+    }
+    100% {
+      border-color: rgb(213, 77, 231); /* Loop back to the starting color */
+    }
+  }
+  
+  .animated-border {
+    border-width: 2px; /* Adjust as needed */
+    border-style: solid;
+    animation: borderAnimation 4s infinite; /* Duration and infinite loop */
+  }
+  

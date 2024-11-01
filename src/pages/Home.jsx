@@ -5,7 +5,7 @@ import { addTodo, updateSearchTerm } from "../redux/actions";
 import { BsSearch } from "react-icons/bs";
 import FilterButtons from "../components/FilterButtons";
 import TodoLists from "../components/TodoLists";
-
+import './Home.css';
 function Home() {
   const todos = useSelector((state) => state.todos);
   const filter = useSelector((state) => state.filter);
@@ -16,7 +16,6 @@ function Home() {
   const handleAddTodo = (text) => {
     dispatch(addTodo(text));
   };
-
   const handleAddTodoClick = () => {
     if (newTodoText.trim() !== "") {
       handleAddTodo(newTodoText.trim());
@@ -29,14 +28,14 @@ function Home() {
   };
 
   return (
-    <div className="max-w-4xl mx-auto sm:mt-8 p-4 bg-gray-100 rounded">
+    <div className="max-w-4xl mx-auto sm:mt-8 p-4 bg-gray-00 rounded-[10px] text-gray-100 animated-border">
       <h2 className="mt-3 mb-6 text-2xl font-bold text-center uppercase">
         Personal TODO APP
       </h2>
       <div className="flex items-center mb-4">
         <input
           id="addTodoInput"
-          className="flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500"
+          className="flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 text-gray-800"
           type="text"
           placeholder="Add Todo"
           value={newTodoText}
@@ -54,7 +53,7 @@ function Home() {
         <FilterButtons />
         <div className="flex items-center mb-4">
           <input
-            className="flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500"
+            className="flex-grow p-2 border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 text-gray-800"
             type="text"
             placeholder="Search Todos"
             value={searchTerm}
