@@ -12,7 +12,7 @@
       border-color: rgb(228, 228, 102);
     }
     100% {
-      border-color: rgb(213, 77, 231); /* Loop back to the starting color */
+      border-color: rgb(213, 77, 231); 
     }
   }
   
